@@ -71,6 +71,6 @@ export PYTHONPATH="/Users/chensteven/Software/spark-1.6.1/python"
 export SPARK_HOME="/Users/chensteven/Software/spark-1.6.1"
 export PATH=$PATH:$SPARK_HOME/bin
 
-
-
-
+# Postgres for Anaconda
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+# export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib:$DYLD_FALLBACK_LIBRARY_PATH
