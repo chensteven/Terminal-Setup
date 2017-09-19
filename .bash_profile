@@ -1,24 +1,5 @@
-# MacPorts Installer addition on 2016-05-19_at_15:57:01: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # Alias
 alias ll='ls -alF'
-alias jessica='cd ~/Documents/York/Jessica'
-alias thilo='cd ~/Documents/York/Thilo'
-alias wecloud='cd ~/Documents/WecloudData'
-alias bash='vi ~/.bash_profile'
-alias pokemon='cd ~/Documents/Pokemon'
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias gh='cd ~/Documents/Github'
-# Python Environment
-alias jpnb="jupyter notebook --profile=spark"
-
-# Github
-# Git branch in prompt.
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
 
 # Terminal
 export CLICOLOR=1
@@ -50,16 +31,9 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(parse_git_branch)\n$C_DARKGRAY\$$C_DEFAULT "
+source ~/.git-prompt.sh
 
-# Setting PATH for Python 3.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-
-# Java
-export JAVA_HOME=$(/usr/libexec/java_home)
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk
-
+export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_DARKGRAY\$$C_DEFAULT "
 # added by Anaconda2 4.1.1 installer
 export PATH="/Users/chensteven/anaconda/bin:$PATH"
 
