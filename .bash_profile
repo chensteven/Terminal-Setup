@@ -6,8 +6,11 @@ alias pi2='ssh pi@172.31.72.27'
 export PATH="/Users/schen/anaconda/bin:$PATH"
 
 # Github
+## Local copy available
 source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
+## No local copy available
+# source ~/.git_prompt.sh
 
 # Terminal Appearance
 export CLICOLOR=1
