@@ -7,10 +7,10 @@ export PATH="/Users/schen/anaconda/bin:$PATH"
 
 # Github
 ## Local copy available
-source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/git/contrib/completion/git-prompt.sh
+#source /usr/local/git/contrib/completion/git-completion.bash
+#source /usr/local/git/contrib/completion/git-prompt.sh
 ## No local copy available
-# source ~/.git_prompt.sh
+source ~/.git-prompt.sh
 
 # Terminal Appearance
 export CLICOLOR=1
@@ -41,4 +41,4 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_LIGHTRED\u$C_CYAN@$C_BLUE\h $C_LIGHTRED: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_BG_BLUE\$$C_DEFAULT "
+export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_DARKGRAY\$$C_DEFAULT "
