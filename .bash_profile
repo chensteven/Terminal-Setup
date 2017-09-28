@@ -1,10 +1,17 @@
 # Alias
 alias ll='ls -alF'
+alias pi1='ssh pi@172.31.72.26'
+alias pi2='ssh pi@172.31.72.27'
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/schen/anaconda/bin:$PATH"
 
-# Terminal
+# Github
+source /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/git/contrib/completion/git-prompt.sh
+
+# Terminal Appearance
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
 C_BLACK="\[\033[30m\]"
@@ -31,20 +38,4 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-source ~/.git-prompt.sh
-
-export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_DARKGRAY\$$C_DEFAULT "
-# added by Anaconda2 4.1.1 installer
-export PATH="/Users/chensteven/anaconda/bin:$PATH"
-
-# Spark Local
-export SCALA_HOME=/usr/local/bin/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
-export PYTHONPATH="/Users/chensteven/Software/spark-1.6.1/python"
-export SPARK_HOME="/Users/chensteven/Software/spark-1.6.1"
-export PATH=$PATH:$SPARK_HOME/bin
-
-# Postgres for Anaconda
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
-# export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib:$DYLD_FALLBACK_LIBRARY_PATH
+export PS1="\n$C_LIGHTRED\u$C_CYAN@$C_BLUE\h $C_LIGHTRED: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_BG_BLUE\$$C_DEFAULT "
