@@ -1,7 +1,12 @@
+# Consolidate everything here to .bashrc
+if [ -f ~/.bashrc ]; then
+        source ~/.bashrc
+fi
+
 # Alias
 alias ll='ls -alF'
-alias pi1='ssh pi@172.31.72.26'
-alias pi2='ssh pi@172.31.72.27'
+alias pi='ssh pi@172.31.72.60'
+
 # added by Anaconda2 4.4.0 installer
 export PATH="/Users/schen/anaconda/bin:$PATH"
 
@@ -15,6 +20,7 @@ source ~/.git-prompt.sh
 # Terminal Appearance
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+C_256_SKIN="\e[38;5;222m"
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
 C_BLACK="\[\033[30m\]"
@@ -41,4 +47,4 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w$C_LIGHTGREEN\$(__git_ps1)\n$C_DARKGRAY\$$C_DEFAULT "
+export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_256_SKIN\h $C_DARKGRAY: $C_LIGHTBLUE\w$C_LIGHTGREEN\$(__git_ps1)\n$C_LIGHTBLUE\$$C_DEFAULT "
