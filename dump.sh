@@ -1,4 +1,4 @@
 cp .bash_profile ~/
-cp .git-prompt.sh ~/
+cp .bash_git ~/
 cp .vimrc ~/
 cp .screenrc ~/
