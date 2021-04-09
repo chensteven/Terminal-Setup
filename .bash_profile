@@ -15,7 +15,8 @@ export PATH="/Users/schen/anaconda/bin:$PATH"
 #source /usr/local/git/contrib/completion/git-completion.bash
 #source /usr/local/git/contrib/completion/git-prompt.sh
 ## No local copy available
-source ~/.git-prompt.sh
+#source ~/.git-prompt.sh
+source ~/.bash_git
 
 # Terminal Appearance
 export CLICOLOR=1
@@ -47,4 +48,10 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_LIGHTRED\u$C_DARKGRAY@$C_256_SKIN\h $C_DARKGRAY: $C_LIGHTBLUE\w$C_LIGHTGREEN\$(__git_ps1)\n$C_LIGHTBLUE\$$C_DEFAULT "
+export PS1="\n$C_LIGHTRED\u $C_LIGHTBLUE\w $C_LIGHTGREEN\$(__git_ps1)\n$C_LIGHTBLUE\$$C_DEFAULT "
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
