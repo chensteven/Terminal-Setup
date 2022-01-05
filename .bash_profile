@@ -5,10 +5,6 @@ fi
 
 # Alias
 alias ll='ls -alF'
-alias pi='ssh pi@172.31.72.60'
-
-# added by Anaconda2 4.4.0 installer
-export PATH="/Users/schen/anaconda/bin:$PATH"
 
 # Github
 ## Local copy available
@@ -49,6 +45,8 @@ C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
 export PS1="\n$C_LIGHTRED\u $C_LIGHTBLUE\w $C_LIGHTGREEN\$(__git_ps1)\n$C_LIGHTBLUE\$$C_DEFAULT "
+
+# pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
